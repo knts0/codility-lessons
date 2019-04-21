@@ -37,19 +37,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/lesson4/PermCheck.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/lesson5/PassingCars.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/lesson4/FrogRiverOne.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/lesson5/GenomicRangeQuery.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+            <state relative-caret-position="30">
+              <caret line="3" selection-start-line="3" selection-end-line="23" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -75,13 +75,15 @@
         <option value="$PROJECT_DIR$/src/test/scala/MainTest.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/lesson4/PermCheck.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/lesson4/FrogRiverOne.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/lesson5/PassingCars.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/lesson5/GenomicRangeQuery.scala" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="413" />
+    <option name="x" value="184" />
     <option name="y" value="23" />
-    <option name="width" value="953" />
+    <option name="width" value="1182" />
     <option name="height" value="694" />
   </component>
   <component name="ProjectView">
@@ -121,6 +123,14 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
               <item name="lesson4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codility-lessons" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codility-lessons" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="lesson5" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -294,18 +304,18 @@
       <option name="presentableId" value="Default" />
       <updated>1553737110920</updated>
       <workItem from="1553737115339" duration="607000" />
-      <workItem from="1555840362378" duration="7149000" />
+      <workItem from="1555840362378" duration="13605000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7756000" />
+    <option name="totallyTimeSpent" value="14212000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1366" height="694" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25377643" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25377643" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Learn" order="2" weight="0.32985595" />
       <window_info id="Designer" order="3" />
@@ -320,7 +330,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32890365" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32890365" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Build" order="12" visible="true" weight="0.32911393" />
@@ -374,8 +384,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/lesson4/FrogRiverOne.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        <state relative-caret-position="207">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/lesson5/PassingCars.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/lesson5/GenomicRangeQuery.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="3" selection-start-line="3" selection-end-line="23" selection-end-column="3" />
         </state>
       </provider>
     </entry>
