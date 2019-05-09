@@ -4,9 +4,10 @@ object PassingCars {
   def solution(a: Array[Int]): Int = {
     var accSum = Array.fill(a.length)(0)
     a.zipWithIndex.foldLeft(0) { (acc, v) =>
-      if (v._1 == 1) acc += v._1
-      accSum(i) = acc
-      acc
+      var nextAcc = acc
+      if (v._1 == 1) nextAcc += v._1
+      accSum(v._2) = nextAcc
+      nextAcc
     }
     var res = 0L
     a.zipWithIndex.foreach { v =>
