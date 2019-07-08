@@ -16,4 +16,28 @@ object OddOccurrencesInArray {
     }
     res
   }
+
+  // ScalaっぽくfoldLeftで書いてみました
+  // result: https://app.codility.com/demo/results/trainingTDVTWY-S5D/
+  def solution2(a: Array[Int]): Int = {
+    val cnt = a.foldLeft(scala.collection.mutable.HashMap.empty[Int, Int]) { (acc, v) =>
+      val num = if (acc.contains(v)) acc(v) else 0
+      acc += (v -> (num + 1))
+    }
+    cnt.foldLeft(0) { (acc, v) =>
+      if (v._2 % 2 == 1) v._1 else acc
+    }
+  }
+
+  // ↑上のコードをimmutableなHashMapにすると速度がでなくなる
+  // result: https://app.codility.com/demo/results/trainingUPASHC-SJ8/
+  def solution3(a: Array[Int]): Int = {
+    val cnt = a.foldLeft(scala.collection.immutable.HashMap.empty[Int, Int]) { (acc, v) =>
+      val num = if (acc.contains(v)) acc(v) else 0
+      acc + (v -> (num + 1))
+    }
+    cnt.foldLeft(0) { (acc, v) =>
+      if (v._2 % 2 == 1) v._1 else acc
+    }
+  }
 }
