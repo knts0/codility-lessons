@@ -1,8 +1,7 @@
 package lesson7
 
-// result: https://app.codility.com/demo/results/trainingUEHQYR-VDN/
-
 object StoneWall {
+  // result: https://app.codility.com/demo/results/trainingUEHQYR-VDN/
   def solution(h: Array[Int]): Int = {
     var cnt = 0
     val stack = new scala.collection.mutable.Stack[Int]()
@@ -24,6 +23,25 @@ object StoneWall {
     }
 
     cnt + stack.size
+  }
+
+  // アルゴリズム改善
+  // result: https://app.codility.com/demo/results/trainingMGSC8Q-H2S/
+  def solution2(h: Array[Int]): Int = {
+    val stack = new scala.collection.mutable.Stack[Int]()
+
+    h.foldLeft(0) { (acc, v) =>
+      while (!stack.isEmpty && stack.top > v) {
+        stack.pop()
+      }
+
+      if (stack.isEmpty || stack.top < v) {
+        stack.push(v)
+        acc + 1
+      } else {
+        acc
+      }
+    }
   }
 
 }
