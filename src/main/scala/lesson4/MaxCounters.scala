@@ -28,10 +28,10 @@ object MaxCounters {
   }
 
   // ↑をなるべくvar使わず書いてみる
-  // result: https://app.codility.com/demo/results/trainingW9MXXT-UZC/
+  // result: https://app.codility.com/demo/results/training9WC2R9-U25/
   import scala.collection._
   def solution2(n: Int, a: Array[Int]): Array[Int] = {
-    val (cntMap, maxTmp, maxNum) = a.foldLeft((mutable.HashMap.empty[Int, Int], 0, 0)) { case ((cnt, maxTmp, maxNum), v) =>
+    val (cntMap, _, maxNum) = a.foldLeft((mutable.HashMap.empty[Int, Int], 0, 0)) { case ((cnt, maxTmp, maxNum), v) =>
       if (v == n + 1) {
         (mutable.HashMap.empty[Int, Int], 0, maxNum + maxTmp)
       } else {
@@ -39,7 +39,6 @@ object MaxCounters {
         (cnt, math.max(cnt(v), maxTmp), maxNum)
       }
     }
-    val ary = Array.fill(n)(0)
-    ary.zipWithIndex.map { case (v, idx) => v + maxNum + cntMap.getOrElse(idx + 1, 0) }
+    (1 to n).map { v => maxNum + cntMap.getOrElse(v, 0) }.toArray
   }
 }

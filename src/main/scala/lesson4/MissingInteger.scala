@@ -35,23 +35,16 @@ object MissingInteger2 {
   }
 }
 
-// returnを書かないようにする
+// HashSet使う、immutableに書く
+// missing integerの候補としては1〜100001で十分だった（回答では1000001までとってる）
+// result: https://app.codility.com/demo/results/trainingKGPTJJ-U74/
 object MissingInteger3 {
   def solution(a: Array[Int]): Int = {
-    val mark = Array.fill(100010)(false)
-
-    a.foreach { v =>
-      if (v > 0 && v <= 100000) mark(v) = true
+    val st = a.foldLeft(scala.collection.immutable.HashSet.empty[Int]) { (acc, v) =>
+      if (acc.contains(v)) acc else acc + v
     }
-
-    var answerAppeared = false // 答えが現れたかどうか
-    var ans = 0 // 答え
-    mark.zipWithIndex.foreach { v =>
-      if (v._2 > 0 && !v._1 && !answerAppeared) {
-        ans = v._2
-        answerAppeared = true
-      }
+    (1 to 1000001).foldLeft(0) { (acc, v) =>
+      if (acc == 0 && !st.contains(v)) v else acc
     }
-    ans
   }
 }
