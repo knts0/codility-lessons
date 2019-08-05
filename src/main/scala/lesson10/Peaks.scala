@@ -38,4 +38,34 @@ object Peaks {
     }
     result
   }
+
+  def solution2(a: Array[Int]): Int = {
+    val n = a.length
+
+    // Peakのindexを保存した配列
+    val peaks = scala.collection.mutable.ArrayBuffer.empty[Int]
+    (1 to n - 2).foreach { idx =>
+      if (a(idx - 1) < a(idx) && a(idx) > a(idx + 1)) peaks += idx
+    }
+
+    // peaks.length から 1までループ
+    (1 to peaks.length).reverse.foreach { peakNum =>
+      if (n % peakNum == 0) {
+        var peakIdx = 0
+        var blockLast = n / peakNum - 1
+        var isFinished = false
+        while (blockLast < n && !isFinished) {
+          if (peakIdx > peaks.length - 1 || peaks(peakIdx) > blockLast) isFinished = true
+          else {
+            while (peakIdx < peaks.length && peaks(peakIdx) <= blockLast) {
+              peakIdx += 1
+            }
+            blockLast += n / peakNum
+          }
+        }
+        if (!isFinished) return peakNum
+      }
+    }
+    0
+  }
 }
